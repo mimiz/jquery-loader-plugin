@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>jquery loader demo</title>
+		<script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+		<script src="jquery.loader.js"></script>
+		<link href="jquery.loader.css" rel="stylesheet" />
+		<script>
+			$(function(){
+				$(window).keypress(function(ev){
+					if(ev.charCode == 99)
+					{
+						$.loader('close');
+					}
+				});
+				$('#test1button').click(function(){
+					$.loader();
+				});
+				$('#test2button').click(function(){
+					$('#test3response').css('display', 'none');
+					$('#test3response').html('');
+				 	$.loader({content:"<div>Loading Data form Server ...</div>"});
+				 	
+					$.ajax({
+						url:'sampledatas.json',
+						dataType:'json',
+						success:function(datas){
+							$.loader('setContent', '<div>Datas received !<br /> Still processing ...</div>');
+							
+							for(i in datas)
+							{
+								var a = $('<div>'+datas[i].country+'</div>');
+								a.css({'float':'left',textAlign:'center', paddingTop:'10px', border:'1px dashed solid', width:'200px', height:'2em',  color:'black', 'background-color':'yellow', margin:'10px'});
+								a.appendTo('#test3response');
+							}
+							$('#test3response').fadeIn(4000, function(){$.loader('close');});
+							
+						},
+						error:function(XMLHttpRequest, textStatus, errorThrown){
+							$.loader('close');
+							alert('there was a arror ...');
+						}
+					});
+				});
+
+				$('#test3button').click(function(){
+					$.loader({
+						className:"blue-with-image",
+						content:''
+					});
+
+				});
+				$('#test4button').click(function(){
+					$.loader({
+						className:"blue-with-image-2",
+						content:''
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+	<h1>Demo Page</h1>
+	<h2>Description</h2>
+	<p><strong>For all tests : </strong>to close the loader just press "c" key.</p>
+	<h2>Test One : simple show ...</h2>
+	<p>Just display the loader by clicking a button<br /><strong>Remind : </strong> Press "c" key to close the loader</p>
+	<input type="button" id="test1button" value="Test 1" />
+	<h2>Test two : using with ajax Request</h2>
+	<p>This example shows you how to use the loader for an ajax request.</p>
+	<input type="button" id="test2button" value="Load Data" />
+	<div id="test3response"></div>
+	<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<h2>Test 3 : Designing the loader</h2>
+	<p>This test shows you that you can design loader ...<br /><strong>Remind : </strong> Press "c" key to close the loader</p>
+	<input type="button" value="Test 3 - standard blue" id="test3button" />
+	<input type="button" value="Test 3 - just image" id="test4button" />
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+      "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <link rel="stylesheet" href="core/qunit.css" type="text/css"/>
+    <script src="http://code.jquery.com/jquery-1.5.js"> </script>
+    <script type="text/javascript" src="http://code.jquery.com/qunit/git/qunit.js"></script>
+    <link href="http://code.jquery.com/qunit/git/qunit.css" type="text/css" rel="stylesheet" />
+    <script src="../jquery.loader.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        module("jQuery Loader");
+        test("jquery loader plugin : Test default options", function()
+        {
+           expect(12);
+           $.loader();
+           equals(1,$('#jquery-loader').size(),'loader is not loaded !, or dafault id has changed' );
+           equals('Loading ...',$('#jquery-loader').html(), 'Default text is not Loading ...' );
+           equals(true, $("#jquery-loader").hasClass('loader'), "Element must have class <strong>loader</strong>");
+           equals(60, $('#jquery-loader').height(), "Height is not 60");
+           equals(200, $('#jquery-loader').width(), "Width is not 200");
+           equals(30001, parseInt($('#jquery-loader').css('z-index')), 'Z-index is not 30001');
+           equals(1, $('#jquery-loader-background').size(), 'mask is not present');
+           equals("0.4", $('#jquery-loader-background').css('opacity'), 'opacity');
+           equals(30000, parseInt($('#jquery-loader-background').css('z-index')), 'Z-index is not 30000');
+           $.loader('setContent', 'test');
+           equals('test',$('#jquery-loader').html(), 'SetContent do not work' );
+           $.loader('close')
+           equals(0, $('#jquery-loader').size(), 'Loader can not close !' );
+           equals(0, $('#jquery-loader-background').size(), 'mask is still present');
+        });
+        test("jquery loader plugin : Test new Options options", function()
+        {
+           expect(12);
+           $.loader({
+        	   content:"Chargement ...",
+               className:'loader',
+               id:'jquery-loader',
+               height:60,
+               width:200,
+               zIndex:30000,
+               background:{
+                   opacity:0.4,
+                   id:'jquery-loader-background'
+               });
+           equals(1,$('#jquery-loader').size(),'loader is not loaded !, or dafault id has changed' );
+           equals('Loading ...',$('#jquery-loader').html(), 'Default text is not Loading ...' );
+           equals(true, $("#jquery-loader").hasClass('loader'), "Element must have class <strong>loader</strong>");
+           equals(60, $('#jquery-loader').height(), "Height is not 60");
+           equals(200, $('#jquery-loader').width(), "Width is not 200");
+           equals(30001, parseInt($('#jquery-loader').css('z-index')), 'Z-index is not 30001');
+           equals(1, $('#jquery-loader-background').size(), 'mask is not present');
+           equals("0.4", $('#jquery-loader-background').css('opacity'), 'opacity');
+           equals(30000, parseInt($('#jquery-loader-background').css('z-index')), 'Z-index is not 30000');
+           $.loader('setContent', 'test');
+           equals('test',$('#jquery-loader').html(), 'SetContent do not work' );
+           $.loader('close')
+           equals(0, $('#jquery-loader').size(), 'Loader can not close !' );
+           equals(0, $('#jquery-loader-background').size(), 'mask is still present');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="qunit-header">QUnit example</h1>
+    <h2 id="qunit-banner"></h2>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests">
+    </ol>
+  </body>
+</html>
