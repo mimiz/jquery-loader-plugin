@@ -39,6 +39,6 @@
         }
     ],
     "files": [
-        "jquery.loader.js", "jquery.loader.css", jquery.loader.demo.html", "sampledatas.json", "images", "min", "tests"
+        "jquery.loader.js", "jquery.loader.css", "jquery.loader.demo.html", "sampledatas.json", "images", "min", "tests"
     ]
 }
