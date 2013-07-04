@@ -1,6 +1,6 @@
 {
     "name": "loader",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "title": "jQuery Loader Plugin",
     "author": {
         "name": "Rémi Goyard",
@@ -17,7 +17,7 @@
         }
     ],
     "dependencies": {
-        "jquery": "1"
+        "jquery": "1.2.2"
     },
     "description": "This little jQuery plugin is used to add a loading popup. This could be usefull for ajax calls, and it’s really simple to use !.",
     "keywords": [
