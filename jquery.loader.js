@@ -1,6 +1,6 @@
 /*
  * jQuery Loader Plugin
- * @version: ${version} (${dateVersion})
+ * @version: 2.0.0
  * @requires jQuery v1.2.2 or later
  * @author : ${author}
  * @see : ${demoURL}

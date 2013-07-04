@@ -1,0 +1,13 @@
+{
+  "name": "jquery-loader-plugin",
+  "version": "2.0.0",
+  "main": "jquery.loader.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "jquery": ">1.2.2"
+  }
+}
