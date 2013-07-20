@@ -1,2 +1,4 @@
 .idea/**
 components/**
+atlassian-ide-plugin.xml
+node_modules/**

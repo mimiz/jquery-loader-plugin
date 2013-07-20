@@ -1,6 +1,6 @@
 {
     "name": "loader",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "title": "jQuery Loader Plugin",
     "author": {
         "name": "Rémi Goyard",
@@ -9,11 +9,7 @@
     "licenses": [
         {
             "type": "MIT",
-            "url": "MIT-LICENSE.txt"
-        },
-        {
-            "type": "GPLv2",
-            "url": "GPL-LICENSE.txt"
+            "url": "LICENSE.md"
         }
     ],
     "dependencies": {
@@ -38,6 +34,6 @@
         }
     ],
     "files": [
-        "jquery.loader.js", "jquery.loader.css", "jquery.loader.demo.html", "sampledatas.json", "images", "min", "tests"
+        "jquery.loader.js", "jquery.loader.css","jquery.loader.demo.html", "sampledatas.json", "images", "min", "tests"
     ]
 }
