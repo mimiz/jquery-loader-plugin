@@ -1,6 +1,6 @@
 {
     "name": "loader",
-    "version": "2.1.0",
+    "version": "2.6.0",
     "title": "jQuery Loader Plugin",
     "author": {
         "name": "Rémi Goyard",
@@ -34,6 +34,12 @@
         }
     ],
     "files": [
-        "jquery.loader.js", "jquery.loader.css","jquery.loader.demo.html", "sampledatas.json", "images", "min", "tests"
+        "jquery.loader.js",
+        "jquery.loader.css",
+        "jquery.loader.demo.html",
+        "sampledatas.json",
+        "images",
+        "min",
+        "tests"
     ]
 }
