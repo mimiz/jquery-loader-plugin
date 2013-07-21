@@ -41,6 +41,11 @@ module.exports = function (grunt) {
         }
     });
 
+
+    grunt.registerTask('updatePkg', function () {
+        grunt.config.set('pkg', grunt.file.readJSON('package.json'));
+    });
+
     // Load the plugin that provides the "uglify" task.
     // grunt.loadNpmTasks('grunt-contrib-uglify');
 
@@ -50,7 +55,7 @@ module.exports = function (grunt) {
     ]);
 
 
-    grunt.registerTask('release-minor', ['bumpup:minor','build','tagrelease']);
+    grunt.registerTask('release-minor', ['bumpup:minor','updatePkg','build','tagrelease']);
     // Default task(s).
     grunt.registerTask('default', ['build']);
 
