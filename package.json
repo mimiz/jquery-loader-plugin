@@ -1,6 +1,6 @@
 {
   "name": "jquery-loader-plugin",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "title": "jQuery Loader Plugin",
   "author": "Rémi Goyard (https://www.mimiz.fr/)",
   "licenses": [
@@ -55,6 +55,7 @@
     "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-cssmin": "~0.6.1",
     "matchdep": "~0.1.2",
-    "grunt-tagrelease": "~0.2.0"
+    "grunt-tagrelease": "~0.2.0",
+    "grunt-bumpup": "~0.2.0"
   }
 }

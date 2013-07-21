@@ -31,9 +31,11 @@ module.exports = function (grunt) {
                 }
             }
         },
+        bumpup: 'package.json',
         tagrelease:{
 
-            file: 'package.json'
+            file: 'package.json',
+            prefix:''
         }
     });
 
@@ -46,7 +48,7 @@ module.exports = function (grunt) {
     ]);
 
 
-    grunt.registerTask('release', ['build','tagrelease']);
+    grunt.registerTask('release-minor', ['build', 'bumpup:minor','tagrelease']);
     // Default task(s).
     grunt.registerTask('default', ['build']);
 
