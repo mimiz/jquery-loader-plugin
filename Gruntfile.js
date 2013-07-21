@@ -7,7 +7,8 @@ module.exports = function (grunt) {
             options: {
                 banner: '/**\n* <%= pkg.title %>.\n*\n* @author <%= pkg.author %>\n' +
                     '* @version <%= pkg.version %>\n' +
-                    '* @license <%= grunt.util.toArray(pkg.licenses)[0].title %>\n' +
+                    '* @license MIT \n' +
+                    '* @license GPLv2 \n' +
                     '* @date <%= grunt.template.today("yyyy-mm-dd") %>\n' +
                     '**/\n',
                 compress: true
@@ -22,7 +23,8 @@ module.exports = function (grunt) {
                 options: {
                     banner: '/**\n* <%= pkg.title %>.\n*\n* @author <%= pkg.author %>\n' +
                         '* @version <%= pkg.version %>\n' +
-                        '* @license <%= grunt.util.toArray(pkg.licenses)[0].title %>\n' +
+                        '* @license MIT \n' +
+                        '* @license GPLv2 \n' +
                         '* @date <%= grunt.template.today("yyyy-mm-dd") %>\n' +
                         '**/'
                 },
@@ -55,7 +57,14 @@ module.exports = function (grunt) {
     ]);
 
 
-    grunt.registerTask('release-minor', ['bumpup:minor','updatePkg','build','tagrelease']);
+    //grunt.registerTask('release-minor', ['bumpup:minor','','build','tagrelease']);
+    grunt.registerTask('release', function (type) {
+        type = type ? type : 'patch';
+        grunt.task.run('bumpup:' + type); // Bump up the package version
+        grunt.task.run('updatePkg'); // Bump up the package version
+        grunt.task.run('build');
+        grunt.task.run('tagrelease');     // Commit & tag the changes from above
+    });
     // Default task(s).
     grunt.registerTask('default', ['build']);
 

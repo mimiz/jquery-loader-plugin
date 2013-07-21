@@ -1,6 +1,6 @@
 {
     "name": "jquery-loader-plugin",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "main": [
         "jquery.loader.js",
         "jquery.loader.css"
