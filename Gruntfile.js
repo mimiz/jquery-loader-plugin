@@ -50,7 +50,7 @@ module.exports = function (grunt) {
     ]);
 
 
-    grunt.registerTask('release-minor', ['build', 'bumpup:minor','tagrelease']);
+    grunt.registerTask('release-minor', ['bumpup:minor','build','tagrelease']);
     // Default task(s).
     grunt.registerTask('default', ['build']);
 
