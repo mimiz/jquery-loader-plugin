@@ -2,7 +2,7 @@
 * jQuery Loader Plugin.
 *
 * @author Rémi Goyard (https://www.mimiz.fr/)
-* @version 2.1.0
+* @version 2.1.1
 * @license MIT 
 * @license GPLv2 
 * @date 2013-07-21
