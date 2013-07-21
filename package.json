@@ -1,61 +1,65 @@
 {
-  "name": "jquery-loader-plugin",
-  "version": "2.6.0",
-  "title": "jQuery Loader Plugin",
-  "author": "Rémi Goyard (https://www.mimiz.fr/)",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "LICENSE.md"
+    "name": "jquery-loader-plugin",
+    "version": "2.9.0",
+    "title": "jQuery Loader Plugin",
+    "author": "Rémi Goyard (https://www.mimiz.fr/)",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "MIT-LICENSE.txt"
+        },
+        {
+            "type": "GPLv2",
+            "url": "GPL-LICENSE.txt"
+        }
+    ],
+    "dependencies": {
+        "jquery": "1"
+    },
+    "description": "This little jQuery plugin is used to add a loading popup. This could be usefull for ajax calls, and it’s really simple to use !.",
+    "keywords": [
+        "loader",
+        "loading",
+        "popup",
+        "waiter",
+        "ajax",
+        "waiting"
+    ],
+    "homepage": "http://www.mimiz.fr/javascript/jquery/jquery-loader-plugin-2/?lang=en",
+    "docs": "http://www.mimiz.fr/javascript/jquery/jquery-loader-plugin-2/?lang=en",
+    "demo": "http://demos.mimiz.fr/jquery/loader",
+    "maintainers": [
+        "Rémi Goyard (https://github.com/mimiz/jquery-loader-plugin)"
+    ],
+    "files": [
+        "jquery.loader.js",
+        "jquery.loader.css",
+        "jquery.loader.demo.html",
+        "sampledatas.json",
+        "images",
+        "min",
+        "tests"
+    ],
+    "main": "jquery.loader.js",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mimiz/jquery-loader-plugin.git"
+    },
+    "bugs": {
+        "url": "https://github.com/mimiz/jquery-loader-plugin/issues"
+    },
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-contrib-uglify": "~0.2.2",
+        "grunt-contrib-cssmin": "~0.6.1",
+        "matchdep": "~0.1.2",
+        "grunt-tagrelease": "~0.2.0",
+        "grunt-bumpup": "~0.2.0"
     }
-  ],
-  "dependencies": {
-    "jquery": "1"
-  },
-  "description": "This little jQuery plugin is used to add a loading popup. This could be usefull for ajax calls, and it’s really simple to use !.",
-  "keywords": [
-    "loader",
-    "loading",
-    "popup",
-    "waiter",
-    "ajax",
-    "waiting"
-  ],
-  "homepage": "http://www.mimiz.fr/javascript/jquery/jquery-loader-plugin-2/?lang=en",
-  "docs": "http://www.mimiz.fr/javascript/jquery/jquery-loader-plugin-2/?lang=en",
-  "demo": "http://demos.mimiz.fr/jquery/loader",
-  "maintainers": [
-    "Rémi Goyard (https://github.com/mimiz/jquery-loader-plugin)"
-  ],
-  "files": [
-    "jquery.loader.js",
-    "jquery.loader.css",
-    "jquery.loader.demo.html",
-    "sampledatas.json",
-    "images",
-    "min",
-    "tests"
-  ],
-  "main": "jquery.loader.js",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mimiz/jquery-loader-plugin.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mimiz/jquery-loader-plugin/issues"
-  },
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-cssmin": "~0.6.1",
-    "matchdep": "~0.1.2",
-    "grunt-tagrelease": "~0.2.0",
-    "grunt-bumpup": "~0.2.0"
-  }
 }

@@ -7,7 +7,7 @@ module.exports = function (grunt) {
             options: {
                 banner: '/**\n* <%= pkg.title %>.\n*\n* @author <%= pkg.author %>\n' +
                     '* @version <%= pkg.version %>\n' +
-                    '* @license <%= pkg.licenses[0].title %>\n' +
+                    '* @license <%= grunt.util.toArray(pkg.licenses)[0].title %>\n' +
                     '* @date <%= grunt.template.today("yyyy-mm-dd") %>\n' +
                     '**/\n',
                 compress: true
@@ -22,7 +22,7 @@ module.exports = function (grunt) {
                 options: {
                     banner: '/**\n* <%= pkg.title %>.\n*\n* @author <%= pkg.author %>\n' +
                         '* @version <%= pkg.version %>\n' +
-                        '* @license <%= pkg.licenses[0].title %>\n' +
+                        '* @license <%= grunt.util.toArray(pkg.licenses)[0].title %>\n' +
                         '* @date <%= grunt.template.today("yyyy-mm-dd") %>\n' +
                         '**/'
                 },

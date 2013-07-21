@@ -1,6 +1,6 @@
 {
     "name": "loader",
-    "version": "2.6.0",
+    "version": "2.9.0",
     "title": "jQuery Loader Plugin",
     "author": {
         "name": "Rémi Goyard",
@@ -9,7 +9,11 @@
     "licenses": [
         {
             "type": "MIT",
-            "url": "LICENSE.md"
+            "url": "MIT-LICENSE.txt"
+        },
+        {
+            "type": "GPLv2",
+            "url": "GPL-LICENSE.txt"
         }
     ],
     "dependencies": {
