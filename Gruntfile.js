@@ -30,6 +30,10 @@ module.exports = function (grunt) {
                     'min/jquery.loader.min.css': ['jquery.loader.css']
                 }
             }
+        },
+        tagrelease:{
+
+            file: 'package.json'
         }
     });
 
@@ -42,7 +46,9 @@ module.exports = function (grunt) {
     ]);
 
 
+    grunt.registerTask('release', ['build','tagrelease']);
     // Default task(s).
     grunt.registerTask('default', ['build']);
+
 
 };
