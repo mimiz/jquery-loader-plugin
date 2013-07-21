@@ -1,13 +1,14 @@
 {
     "name": "jquery-loader-plugin",
-    "version": "2.1.0",
-    "main": ["jquery.loader.js", "jquery.loader.css"],
-
+    "version": "2.3.0",
+    "main": [
+        "jquery.loader.js",
+        "jquery.loader.css"
+    ],
     "ignore": [
         "**/.*",
         "node_modules",
         "components"
-
     ],
     "dependencies": {
         "jquery": ">1.2.2"

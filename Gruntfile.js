@@ -31,7 +31,9 @@ module.exports = function (grunt) {
                 }
             }
         },
-        bumpup: 'package.json',
+        bumpup: {
+            files:['package.json', 'bower.json']
+        },
         tagrelease:{
 
             file: 'package.json',
