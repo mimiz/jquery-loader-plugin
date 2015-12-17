@@ -33,12 +33,13 @@ $.loader("close");
 * **zIndex** : set the z-index of the popup. Default is _30000_
 * **background** : set the background opacity and the id of the background. Default is ````{opacity:0.4, id:’jquery-loader-background’ }````
 
-
 ## Development :
 
  For helping in development, you will need to have node.js installed and, after forking and cloning, in the root directory of the project run the folowwing commands :
 
-   npm install
-   bower install
-   grunt test
-   grunt
+````
+npm install
+bower install
+grunt test
+grunt
+````
